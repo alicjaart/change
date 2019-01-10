@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    position: fixed;
+    cursor: pointer;
+    z-index: 1;
+    
+}
+
+.back {
+    height: 100vh;
+    background-color: grey;
+/*
+    background-image: url(image/IMG_20180411_191604n.jpg);
+    position: relative;
+    background-size: cover;
+*/
+    top: 0;
+    left: 0;
+    transition: 1s;
+/*    z-index: -1;*/
+    
+}
+
+.back p {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    opacity: 0;
+    transition: 1s;
+}
+
+div.red {
+    top: 20px;
+    left: 20px;
+    background-color: red;
+}
+
+div.green {
+    top: 20px;
+    right: 20px;
+    background-color: green;
+}
+
+div.blue {
+    bottom: 20px;
+    left: 20px;
+    background-color: blue;
+}
+
+div.orange {
+    bottom: 20px;
+    right: 20px;
+    background-color: orange;
+}
+
+div.red:hover~div.back {
+    background-color: red;
+}
+
+div.green:hover~div.back {
+    background-color: green;
+}
+
+div.blue:hover~div.back {
+    background-color: blue;
+}
+
+div.orange:hover~div.back {
+    background-color: orange;
+}
+
+div.red:hover~div.back p.red,
+div.green:hover~div.back p.green,
+div.blue:hover~div.back p.blue,
+div.orange:hover~div.back p.orange {
+    opacity: 1;
+}
+
+
